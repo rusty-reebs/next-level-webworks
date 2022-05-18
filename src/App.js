@@ -1,13 +1,14 @@
 import React from "react";
+import Hello from "./components/Hello";
+import Projects from "./components/Projects";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="text-2xl">Hi</p>
-      </header>
+    <div className="h-screen bg-grey font-manrope">
+      <Hello />
+      <Projects />
     </div>
   );
-}
+};
 
 export default App;
