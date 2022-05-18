@@ -19,7 +19,9 @@ const Hello = () => {
               </h1>
               <div className="bg-yellow w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
             </div>
-            <p className="text-xl">A full stack web developer and designer.</p>
+            <p className="text-xl">
+              I do full stack web development and design.
+            </p>
             <p className="text-xl">
               I create effective and engaging user experiences{" "}
               <span className="text-darkblue font-bold">
