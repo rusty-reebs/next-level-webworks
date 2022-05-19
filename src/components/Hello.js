@@ -1,6 +1,6 @@
 import React from "react";
 const profilepic = require("../img/profilepic.png");
-const downarrow = require("../img/downarrow.png");
+const downArrow = require("../img/downarrow.png");
 const gears = require("../img/gears.png");
 
 const Hello = () => {
@@ -44,7 +44,7 @@ const Hello = () => {
       </div>
       <div className="absolute bottom-0 inset-x-0">
         <img
-          src={downarrow}
+          src={downArrow}
           alt="downarrow"
           className="animate-bounce h-10 mx-auto"
         ></img>
