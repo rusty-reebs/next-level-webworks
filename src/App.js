@@ -2,6 +2,7 @@ import React from "react";
 import Hello from "./components/Hello";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Tools from "./components/Tools";
 import Contact from "./components/Contact";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Hello />
       <Projects />
       <About />
+      <Tools />
       <Contact />
     </div>
   );

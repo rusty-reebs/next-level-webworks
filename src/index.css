@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-svg {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1012%26quot%3b)' fill='none'%3e%3cpath d='M803.42-37.04C692.75-23.41 735.76 217.92 443.78 226.74 151.79 235.56-89.85 410.07-275.51 411.54' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M746.51-38.15C600.48-21.13 543.39 285.03 268.29 304.13-6.81 323.23-79.71 506.94-209.93 511.33' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1228.12-54.28C1055.41-1.26 1020.18 479.58 756.05 492.88 491.92 506.18 520.02 422.88 283.98 422.88 47.95 422.88-68.78 492.69-188.09 492.88' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1083.62-2.31C974.21 4.05 893.34 203.95 697.07 204.48 500.79 205.01 503.79 134.48 310.51 134.48 117.24 134.48 22.17 204.2-76.04 204.48' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1245.52-44.49C1053.63-27.14 948.93 360.28 596.75 371.5 244.57 382.72 113.61 505.2-52.02 505.9' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1012'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+
+}

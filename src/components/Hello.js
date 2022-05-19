@@ -4,25 +4,27 @@ const downarrow = require("../img/downarrow.png");
 
 const Hello = () => {
   return (
-    <div className="h-screen bg-grey">
-      <div className="pt-64 mx-32 relative">
-        <div className="flex flex-row justify-between">
+    <div className="h-screen bg-grey bg-svg">
+      <div className="z-10 pt-20 mx-4 xl:pt-64 xl:mx-32 relative">
+        <div className="flex flex-col xl:flex-row xl:justify-between">
           <div>
             <div className="relative mb-12">
-              <h1 className="text-6xl font-bold">Next Level Webworks</h1>
+              <h1 className="text-5xl xl:text-6xl font-bold">
+                Next Level Webworks
+              </h1>
               <div className="bg-red w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
             </div>
             <div className="relative mb-14">
-              <h1 className="text-4xl font-bold">
+              <h1 className="text-3xl xl:text-4xl font-bold">
                 Hello! I'm Russell.
                 <span className="animate-waving-hand">👋</span>
               </h1>
               <div className="bg-yellow w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
             </div>
-            <p className="text-xl">
-              I do full stack web development and design.
+            <p className="text-xl mb-4 xl:mb-0">
+              I specialize in full stack web development and design.
             </p>
-            <p className="text-xl">
+            <p className="text-xl mb-4 xl:mb-0">
               I create effective and engaging user experiences{" "}
               <span className="text-darkblue font-bold">
                 to bring you more business.
@@ -33,7 +35,7 @@ const Hello = () => {
             <img
               src={profilepic}
               alt="profilepic"
-              className="h-64 rounded-full"
+              className="mx-auto xl:mx-0 h-64 rounded-full"
             ></img>
           </div>
         </div>
