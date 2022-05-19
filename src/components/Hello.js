@@ -1,6 +1,7 @@
 import React from "react";
 const profilepic = require("../img/profilepic.png");
 const downarrow = require("../img/downarrow.png");
+const gears = require("../img/gears.png");
 
 const Hello = () => {
   return (
@@ -10,7 +11,8 @@ const Hello = () => {
           <div>
             <div className="relative mb-12">
               <h1 className="text-5xl xl:text-6xl font-bold">
-                Next Level Webworks
+                Next Level Webworks{" "}
+                <img src={gears} alt="logo" className="h-14 inline-block" />
               </h1>
               <div className="bg-red w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
             </div>
