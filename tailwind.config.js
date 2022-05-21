@@ -29,5 +29,5 @@ module.exports = {
       manrope: ["Manrope", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
