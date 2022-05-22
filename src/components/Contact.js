@@ -27,13 +27,25 @@ const Contact = () => {
                 placeholder="Name"
               ></input>
             </div>
-            <input type="text" className="w-max" placeholder="Email"></input>
+            <div className="border-b border-red">
+              <input
+                type="text"
+                className="appearance-none bg-transparent border-none w-full text-grey focus:outline-none"
+                placeholder="Email"
+              ></input>
+            </div>
             <textarea
               type="text"
-              rows="10"
-              className="w-36"
+              rows="8"
+              className="w-full border-none text-grey focus:outline-none"
               placeholder="Message"
             ></textarea>
+            <button
+              type="submit"
+              className="bg-lightblue text-xl p-3 rounded-md"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>
