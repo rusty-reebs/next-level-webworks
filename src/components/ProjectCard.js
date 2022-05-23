@@ -1,12 +1,42 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
+import useOnScreen from "./utils/useOnScreen";
+
 const phone = require("../img/phone.png");
 const worldschooling = require("../img/worldschoolingpopups.jpg");
 const wspopups = require("../img/wspopups.png");
 
-const ProjectCard = ({ bgcolor }) => {
+const ProjectCard = ({ bgcolor, direction }) => {
+  const controls = useAnimation();
+  const rootRef = useRef();
+  const onScreen = useOnScreen(rootRef);
+  let screenSide = direction;
+  if (screenSide === "left") {
+    // insert code
+  }
+
+  useEffect(() => {
+    if (onScreen) {
+      console.log("on screen!");
+      controls.start({
+        x: 0,
+        // opacity: 1,
+        transition: {
+          duration: 1.5,
+          ease: "easeOut",
+        },
+      });
+    }
+  }, [onScreen, controls]);
   return (
-    <div
+    <motion.div
       className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300`}
+      ref={rootRef}
+      initial={{
+        //   opacity: 0,
+        x: "110%",
+      }}
+      animate={controls}
     >
       <img
         src={wspopups}
@@ -14,7 +44,7 @@ const ProjectCard = ({ bgcolor }) => {
         className="mx-auto py-10 opacity-100"
       ></img>
       {/* <img src={phone} alt="phone" className="h-full mx-auto"></img> */}
-    </div>
+    </motion.div>
   );
 };
 
