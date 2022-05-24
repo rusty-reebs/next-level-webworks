@@ -10,9 +10,14 @@ const ProjectCard = ({ bgcolor, direction }) => {
   const controls = useAnimation();
   const rootRef = useRef();
   const onScreen = useOnScreen(rootRef);
-  let screenSide = direction;
-  if (screenSide === "left") {
-    // insert code
+  let screenSide;
+  if (direction === "fromLeft") {
+    // screenSide = "-20rem";
+    screenSide = "-100%";
+  }
+  if (direction === "fromRight") {
+    // screenSide = "20rem";
+    screenSide = "100%";
   }
 
   useEffect(() => {
@@ -20,11 +25,11 @@ const ProjectCard = ({ bgcolor, direction }) => {
       console.log("on screen!");
       controls.start({
         x: 0,
-        // opacity: 1,
-        transition: {
-          duration: 1.5,
-          ease: "easeOut",
-        },
+        opacity: 1,
+        // transition: {
+        //   duration: 1.5,
+        //   ease: "easeOut",
+        // },
       });
     }
   }, [onScreen, controls]);
@@ -33,10 +38,11 @@ const ProjectCard = ({ bgcolor, direction }) => {
       className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300`}
       ref={rootRef}
       initial={{
-        //   opacity: 0,
-        x: "110%",
+        opacity: 0,
+        x: screenSide,
       }}
       animate={controls}
+      //   whileHover={{ scale: 1.2 }}
     >
       <img
         src={wspopups}

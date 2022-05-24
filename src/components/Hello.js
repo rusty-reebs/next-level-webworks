@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 const profilepic = require("../img/profilepic.png");
 const downArrow = require("../img/downarrow.png");
 const gears = require("../img/gears.png");
@@ -18,8 +19,8 @@ const Hello = () => {
             </div>
             <div className="relative mb-14">
               <h1 className="text-3xl xl:text-4xl font-bold">
-                Hello! I'm Russell.
-                <span className="animate-waving-hand">👋</span>
+                Hello! I'm Russell.&nbsp;
+                <WavingHand />
               </h1>
               <div className="bg-yellow w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
             </div>
@@ -50,6 +51,30 @@ const Hello = () => {
         ></img>
       </div>
     </div>
+  );
+};
+
+const WavingHand = () => {
+  return (
+    <motion.div
+      style={{
+        marginBottom: "-20px",
+        marginRight: "-45px",
+        paddingBottom: "20px",
+        paddingRight: "45px",
+        display: "inline-block",
+      }}
+      animate={{ rotate: 20 }}
+      transition={{
+        yoyo: Infinity,
+        from: 0,
+        duration: 0.2,
+        ease: "easeInOut",
+        type: "tween",
+      }}
+    >
+      👋
+    </motion.div>
   );
 };
 
