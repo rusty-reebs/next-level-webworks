@@ -8,6 +8,7 @@ module.exports = {
       grey: "#ECECEC",
       lightblue: "#90CCF4",
       darkblue: "#5DA2D5",
+      black: "#000",
     },
     fontFamily: {
       manrope: ["Manrope", "sans-serif"],

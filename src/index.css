@@ -7,3 +7,9 @@
     background-repeat: no-repeat;
 
 }
+
+.bg-contact {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1052%26quot%3b)' fill='none'%3e%3cpath d='M-149.99 77.48C-50.88 77.76 45.11 147.48 240.21 147.48 435.31 147.48 408.51 63.88 630.4 77.48 852.3 91.08 872.1 520.32 1020.6 573.77' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-107.6 262.45C59.32 261.99 212.21 142.83 549.65 144.85 887.1 146.87 1012.15 551.26 1206.91 569.16' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-205.43 116.58C-84.23 116.76 34.42 186.58 274.28 186.58 514.13 186.58 489.9 105.99 753.98 116.58 1018.06 127.17 1063.85 585.3 1233.69 630.56' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-49.78 302.7C70.56 302.89 188.34 372.7 426.47 372.7 664.59 372.7 654.28 299.71 902.71 302.7 1151.14 305.69 1231.85 637.61 1378.96 656.22' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-66.84 236.26C67.31 232.8 224.89 30.89 432.87 40.26 640.86 49.63 563.81 502.78 682.73 599.11' stroke='rgba(144%2c 204%2c 244%2c 0.3)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1052'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
