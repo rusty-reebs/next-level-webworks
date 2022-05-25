@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import useOnScreen from "./utils/useOnScreen";
+import link from "../img/link.svg";
 
 const phone = require("../img/phone.png");
 const worldschooling = require("../img/worldschoolingpopups.jpg");
@@ -69,13 +70,12 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
                   {details.title}
                 </h2>
                 <p className="text-xl text-center">{details.description}</p>
-                <a
-                  href="https://worldschoolingpopups.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  <p className="text-xl text-center">{details.link}</p>
+                <a href={details.url} target="_blank" rel="noopener noreferrer">
+                  <p className="text-xl text-center">
+                    <img src={link} alt="link" className="inline h-4" />
+                    &nbsp;&nbsp;
+                    <span className="underline">{details.link}</span>
+                  </p>
                 </a>
               </div>
             </motion.div>

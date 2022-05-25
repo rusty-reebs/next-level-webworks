@@ -1,7 +1,7 @@
 //TODO make hand scale from 0 to 1 after delay, then begin waving
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 const profilepic = require("../img/profilepic.png");
 const downArrow = require("../img/downarrow.png");
 const gears = require("../img/gears.png");
@@ -57,6 +57,24 @@ const Hello = () => {
 };
 
 const WavingHand = () => {
+  const animation = useAnimation();
+
+  const sequence = async () => {
+    await animation.start({
+      scale: 1,
+      transition: { delay: 0.5, duration: 0.5 },
+    });
+    animation.start({
+      rotate: 20,
+      transition: {
+        yoyo: Infinity,
+        from: 0,
+        duration: 0.2,
+        ease: "easeInOut",
+        type: "tween",
+      },
+    });
+  };
   return (
     <motion.div
       style={{
@@ -66,14 +84,16 @@ const WavingHand = () => {
         paddingRight: "45px",
         display: "inline-block",
       }}
-      animate={{ rotate: 20 }}
-      transition={{
-        yoyo: Infinity,
-        from: 0,
-        duration: 0.2,
-        ease: "easeInOut",
-        type: "tween",
-      }}
+      //   animate={{ rotate: 20 }}
+      initial={[{ scale: 0 }, () => sequence()]}
+      animate={animation}
+      //   transition={{
+      //     yoyo: Infinity,
+      //     from: 0,
+      //     duration: 0.2,
+      //     ease: "easeInOut",
+      //     type: "tween",
+      //   }}
     >
       👋
     </motion.div>
