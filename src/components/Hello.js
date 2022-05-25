@@ -1,3 +1,5 @@
+//TODO make hand scale from 0 to 1 after delay, then begin waving
+
 import React from "react";
 import { motion } from "framer-motion";
 const profilepic = require("../img/profilepic.png");
