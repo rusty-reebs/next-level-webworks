@@ -3,10 +3,6 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import useOnScreen from "./utils/useOnScreen";
 import link from "../img/link.svg";
 
-const phone = require("../img/phone.png");
-const worldschooling = require("../img/worldschoolingpopups.jpg");
-const wspopups = require("../img/wspopups.png");
-
 const ProjectCard = ({ bgcolor, direction, details }) => {
   const [isToggled, setToggle] = useState(false);
   const controls = useAnimation();
@@ -37,7 +33,9 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
   }, [onScreen, controls]);
   return (
     <motion.div
-      className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60`}
+      className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60 ${
+        details.landscape ? "h-7/8" : "h-96"
+      }`}
       ref={rootRef}
       initial={{
         opacity: 0,
@@ -49,9 +47,9 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
     >
       <div className="relative">
         <img
-          src={wspopups}
-          alt="phone"
-          className={` mx-auto py-10 ${
+          src={details.image}
+          alt={details.link}
+          className={` mx-auto py-10 max-h-fit ${
             !isToggled ? "opacity-100" : "opacity-20"
           } `}
         ></img>

@@ -4,7 +4,7 @@ import projects from "./utils/projects";
 
 const Projects = () => {
   return (
-    <div className="max-h-max bg-grey overflow-hidden">
+    <div className="bg-grey overflow-hidden">
       <div className="pt-20 mx-4 xl:mx-32">
         <div className="relative mb-20">
           <h2 className="text-3xl xl:text-4xl font-bold">
@@ -19,9 +19,21 @@ const Projects = () => {
             direction="fromLeft"
             details={projects[0]}
           />
-          <ProjectCard bgcolor="bg-lightblue" direction="fromRight" />
-          <ProjectCard bgcolor="bg-yellow" direction="fromLeft" />
-          <ProjectCard bgcolor="bg-darkblue" direction="fromRight" />
+          <ProjectCard
+            bgcolor="bg-lightblue"
+            direction="fromRight"
+            details={projects[1]}
+          />
+          <ProjectCard
+            bgcolor="bg-yellow"
+            direction="fromLeft"
+            details={projects[1]}
+          />
+          <ProjectCard
+            bgcolor="bg-darkblue"
+            direction="fromRight"
+            details={projects[0]}
+          />
         </div>
       </div>
     </div>

@@ -70,11 +70,15 @@ const Tools = () => {
       <div className="pt-20 mx-4 xl:mx-32">
         <div className="relative mb-20 w-44">
           <h2 className="text-3xl xl:text-4xl font-bold">Tools</h2>
+          {/* //! Always using the latest tech */}
           <div className="bg-darkblue w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
         </div>
         <div className="grid grid-cols-2 gap-x-5 gap-y-10 xl:grid-cols-6 xl:gap-x-10 xl:gap-y-10 xl:h-36">
-          {svg.map((svg) => (
-            <div className="flex flex-col shadow-md rounded-md h-32 justify-center">
+          {svg.map((svg, index) => (
+            <div
+              key={index}
+              className="flex flex-col shadow-md rounded-md h-32 justify-center"
+            >
               <img src={svg.image} alt={svg.name} className="h-16" />
               <p className="text-center">{svg.name}</p>
             </div>
