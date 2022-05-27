@@ -3,7 +3,7 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import useOnScreen from "./utils/useOnScreen";
 import link from "../img/link.svg";
 
-const ProjectCard = ({ bgcolor, direction, details }) => {
+const ProjectCard = ({ bgcolor, outline, direction, details }) => {
   const [isToggled, setToggle] = useState(false);
   const controls = useAnimation();
   const rootRef = useRef();
@@ -19,7 +19,6 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
 
   useEffect(() => {
     if (onScreen) {
-      console.log("on screen!");
       controls.start({
         x: 0,
         opacity: 1,
@@ -33,8 +32,8 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
   }, [onScreen, controls]);
   return (
     <motion.div
-      className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60 ${
-        details.landscape ? "h-7/8" : "h-96"
+      className={`${bgcolor} rounded-lg shadow-lg bg-opacity-60 w-full ${
+        details.landscape ? "xl:w-fit" : "xl:w-1/3"
       }`}
       ref={rootRef}
       initial={{
@@ -42,29 +41,28 @@ const ProjectCard = ({ bgcolor, direction, details }) => {
         x: screenSide,
       }}
       animate={controls}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       onClick={() => setToggle(!isToggled)}
     >
       <div className="relative">
         <img
           src={details.image}
           alt={details.link}
-          className={` mx-auto py-10 max-h-fit ${
+          className={` mx-auto py-5 xl:py-10 px-5 xl:px-0 max-h-[26rem] xl:h-[32rem] ${
             !isToggled ? "opacity-100" : "opacity-20"
           } `}
         ></img>
         <AnimatePresence>
           {isToggled ? (
-            //! link icon
             <motion.div
               key="detail"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.8 }}
               exit={{ opacity: 0 }}
-              className="absolute left-0 top-0 h-full w-full bg-grey rounded-lg outline outline-4 outline-offset-0 outline-red"
+              className={` absolute left-0 top-0 h-full w-full bg-grey rounded-lg outline outline-4 outline-offset-0 ${outline} `}
             >
-              <div className="flex flex-col gap-y-10 justify-center h-full mx-10">
-                <h2 className="text-2xl font-bold text-center">
+              <div className="flex flex-col gap-y-10 justify-center h-full mx-auto">
+                <h2 className="text-xl font-bold text-center">
                   {details.title}
                 </h2>
                 <p className="text-xl text-center">{details.description}</p>

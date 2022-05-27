@@ -66,12 +66,16 @@ const svg = [
 
 const Tools = () => {
   return (
-    <div className="h-screen bg-grey">
+    <div className="xl:h-screen bg-grey">
       <div className="pt-20 mx-4 xl:mx-32">
-        <div className="relative mb-20 w-44">
-          <h2 className="text-3xl xl:text-4xl font-bold">Tools</h2>
-          {/* //! Always using the latest tech */}
-          <div className="bg-darkblue w-full opacity-30 h-8 absolute -bottom-5 right-0 blur-sm rounded-md"></div>
+        <div className="relative mb-20">
+          <h2 className="text-3xl xl:text-4xl font-bold">
+            Tools
+            <p className="inline-block text-lg font-normal italic pl-4">
+              &nbsp;Always using the latest tech!
+            </p>
+          </h2>
+          <div className="bg-darkblue w-4/5 xl:w-1/3 opacity-30 h-4 absolute -bottom-5 left-0 blur-sm rounded-md"></div>
         </div>
         <div className="grid grid-cols-2 gap-x-5 gap-y-10 xl:grid-cols-6 xl:gap-x-10 xl:gap-y-10 xl:h-36">
           {svg.map((svg, index) => (

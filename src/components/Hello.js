@@ -6,7 +6,7 @@ const gears = require("../img/gears.png");
 
 const Hello = () => {
   return (
-    <div className="h-screen bg-grey bg-svg">
+    <div className="xl:h-screen bg-grey bg-svg">
       <div className="z-10 pt-20 mx-4 xl:pt-64 xl:mx-32 relative">
         <div className="flex flex-col xl:flex-row xl:justify-between">
           <div>
